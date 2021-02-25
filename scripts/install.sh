@@ -235,12 +235,13 @@ main() {
     else
       unpack "${PKG_NAME}" "${OUT_DIR}" "${PKG_EXT}" || error_exit "Cannot unpack the package"
     fi
-
+######
     # Install AdGuard Home service and run it.
-    ( cd "${AGH_DIR}" && ./AdGuardHome -s install || error_exit "Cannot install AdGuardHome as a service" )
+    #( cd "${AGH_DIR}" && ./AdGuardHome -s install || error_exit "Cannot install AdGuardHome as a service" )
 
-    rm "${PKG_NAME}"
-
+    #rm "${PKG_NAME}"
+    ls
+#######    
     log_info "AdGuard Home is now installed and running."
     log_info "You can control the service status with the following commands:"
     log_info "  sudo ${AGH_DIR}/AdGuardHome -s start|stop|restart|status|install|uninstall"
